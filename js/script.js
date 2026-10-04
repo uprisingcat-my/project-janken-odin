@@ -1,3 +1,1 @@
-    <script>
-        console.log("Hello nyaa!!");
-    </script>
+console.log("Hello nyaa!!");
