@@ -11,4 +11,4 @@ function getComputerChoice(randomNumber) {
     }
 }
 
-getComputerChoice(Math.random);
+console.log(getComputerChoice(Math.random));
