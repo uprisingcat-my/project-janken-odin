@@ -39,8 +39,10 @@ function playRound(userChoice, computerChoice) {
             // computerChoice === 'scissor' ? humanScore += 1 : computerChoice === 'paper' && (computerScore += 1)
             if(computerChoice === 'scissor') {
                 humanScore += 1;
+                console.log("you win this round!");
             } else if (computerChoice === 'paper') {
                 computerScore += 1;
+                console.log("computer wins this round!")
             }
             break;
         case 'paper':
