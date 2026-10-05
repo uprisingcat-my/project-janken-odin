@@ -66,7 +66,7 @@ function playRound(userChoice, computerChoice) {
                 humanScore += 1;
                 score();
                 console.log("+++ you win this round! +++");
-            } else if (computerChoice === 'paper') {
+            } else if (computerChoice === 'rock') {
                 computerScore += 1;
                 score();
                 console.log("+++ computer wins this round! +++");
