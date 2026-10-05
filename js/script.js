@@ -10,8 +10,8 @@ function getComputerChoice(randomNumber) {
         return "paper"
     } else {
         // console.log(randomNumber);
-        console.log(`computer plays: scissor`);
-        return "scissor"
+        console.log(`computer plays: scissors`);
+        return "scissors"
     }
 }
 
@@ -37,10 +37,10 @@ function playRound(userChoice, computerChoice) {
             console.log('+++ This round is a draw +++');
             break;
         case 'rock':
-            // computerChoice === 'scissor' && (humanScore += 1);
+            // computerChoice === 'scissors' && (humanScore += 1);
             // computerChoice === 'paper' && (computerScore +=1);
-            // computerChoice === 'scissor' ? humanScore += 1 : computerChoice === 'paper' && (computerScore += 1)
-            if(computerChoice === 'scissor') {
+            // computerChoice === 'scissors' ? humanScore += 1 : computerChoice === 'paper' && (computerScore += 1)
+            if(computerChoice === 'scissors') {
                 humanScore += 1;
                 score();
                 console.log("+++ you win this round! +++");
@@ -51,18 +51,18 @@ function playRound(userChoice, computerChoice) {
             }
             break;
         case 'paper':
-            // computerChoice === 'rock' ? humanScore += 1 : computerChoice === 'scissor' && (computerScore += 1)
+            // computerChoice === 'rock' ? humanScore += 1 : computerChoice === 'scissors' && (computerScore += 1)
             if(computerChoice === 'rock') {
                 humanScore += 1;
                 score();
                 console.log("+++ you win this round! +++");
-            } else if (computerChoice === 'scissor') {
+            } else if (computerChoice === 'scissors') {
                 computerScore += 1;
                 score();
                 console.log("+++ computer wins this round! +++");
             }
             break;
-        case 'scissor':
+        case 'scissors':
             // computerChoice === 'paper' ? humanScore += 1 : computerChoice === 'rock' && (computerScore += 1)
             if(computerChoice === 'paper') {
                 humanScore += 1;
@@ -83,7 +83,7 @@ function playRound(userChoice, computerChoice) {
 function playGame() {
     console.log('__________________________________________');
     for (let i =0; i<5; i++) {
-        playRound(getUserChoice(prompt('Rock, Paper or Scissor?')),getComputerChoice(Math.random()));
+        playRound(getUserChoice(prompt('Rock, Paper or Scissors?')),getComputerChoice(Math.random()));
     }
     if(humanScore > computerScore) {
         console.log('__________You Won!__________');
