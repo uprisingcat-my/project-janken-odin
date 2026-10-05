@@ -11,7 +11,7 @@ function getComputerChoice(randomNumber) {
     } else {
         // console.log(randomNumber);
         console.log(`computer plays: scissor`);
-        return "scissors"
+        return "scissor"
     }
 }
 
@@ -31,7 +31,7 @@ function playRound(userChoice, computerChoice) {
     const normalizedUserChoice = userChoice.toLowerCase();
     switch(normalizedUserChoice) {
         case computerChoice:
-            console.log('It is a draw');
+            console.log('This round is a draw');
             break;
         case 'rock':
             // computerChoice === 'scissor' && (humanScore += 1);
