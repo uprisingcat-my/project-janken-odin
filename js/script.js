@@ -3,11 +3,14 @@ console.log("Hello nyaa!!");
 
 function getComputerChoice(randomNumber) {
     if(randomNumber<1/3) {
+        console.log(`computer plays: rock`);
         return "rock"
     } else if(randomNumber<2/3) {
+        console.log(`computer plays: paper`);
         return "paper"
     } else {
         // console.log(randomNumber);
+        console.log(`computer plays: scissor`);
         return "scissors"
     }
 }
@@ -15,7 +18,8 @@ function getComputerChoice(randomNumber) {
 // console.log(getComputerChoice(Math.random()));
 
 function getUserChoice(choice) {
-    return prompt('Rock, Paper or Scissor?')
+    console.log(`you play: ${choice.toLowerCase()}`);
+    return choice.toLowerCase();
 }
 
 // console.log(getUserChoice
@@ -62,7 +66,7 @@ function playRound(userChoice, computerChoice) {
 
 function playGame() {
     for (let i =0; i<5; i++) {
-        playRound(getUserChoice(),getComputerChoice());
+        playRound(getUserChoice(prompt('Rock, Paper or Scissor?')),getComputerChoice(Math.random()));
     }
     if(humanScore > computerScore) {
         console.log('You Won!');
