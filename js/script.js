@@ -32,6 +32,7 @@ function playRound(userChoice, computerChoice) {
     const normalizedUserChoice = userChoice.toLowerCase();
     switch(normalizedUserChoice) {
         case computerChoice:
+            score();
             console.log('+++ This round is a draw +++');
             break;
         case 'rock':
@@ -40,6 +41,7 @@ function playRound(userChoice, computerChoice) {
             // computerChoice === 'scissor' ? humanScore += 1 : computerChoice === 'paper' && (computerScore += 1)
             if(computerChoice === 'scissor') {
                 humanScore += 1;
+                score();
                 console.log("+++ you win this round! +++");
             } else if (computerChoice === 'paper') {
                 computerScore += 1;
@@ -50,9 +52,11 @@ function playRound(userChoice, computerChoice) {
             // computerChoice === 'rock' ? humanScore += 1 : computerChoice === 'scissor' && (computerScore += 1)
             if(computerChoice === 'rock') {
                 humanScore += 1;
+                score();
                 console.log("+++ you win this round! +++");
             } else if (computerChoice === 'scissor') {
                 computerScore += 1;
+                score();
                 console.log("+++ computer wins this round! +++");
             }
             break;
@@ -60,13 +64,16 @@ function playRound(userChoice, computerChoice) {
             // computerChoice === 'paper' ? humanScore += 1 : computerChoice === 'rock' && (computerScore += 1)
             if(computerChoice === 'paper') {
                 humanScore += 1;
+                score();
                 console.log("+++ you win this round! +++");
             } else if (computerChoice === 'paper') {
                 computerScore += 1;
+                score();
                 console.log("+++ computer wins this round! +++");
             }
             break;
         default:
+            score();
             console.log('+++ Please enter a valid answer! +++');
         }
 }
@@ -75,8 +82,6 @@ function playGame() {
     console.log('__________________________________________');
     for (let i =0; i<5; i++) {
         playRound(getUserChoice(prompt('Rock, Paper or Scissor?')),getComputerChoice(Math.random()));
-        console.log(`your score: ${humanScore}`);
-        console.log(`computer score: ${computerScore}`);
     }
     if(humanScore > computerScore) {
         console.log('__________You Won!__________');
@@ -85,6 +90,13 @@ function playGame() {
     } else {
         console.log('________It\'s a draw!________');
     }
+}
+
+function score() {
+    console.log('================================');
+    console.log(`your score: ${humanScore}`);
+    console.log(`computer score: ${computerScore}`);
+    console.log('================================');
 }
 
 playGame();
