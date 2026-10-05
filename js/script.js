@@ -12,13 +12,13 @@ function getComputerChoice(randomNumber) {
     }
 }
 
-console.log(getComputerChoice(Math.random()));
+// console.log(getComputerChoice(Math.random()));
 
 function getUserChoice(choice) {
     return prompt('Rock, Paper or Scissor?')
 }
 
-console.log(getUserChoice());
+// console.log(getUserChoice
 
 let humanScore = 0;
 let computerScore = 0;
@@ -72,3 +72,5 @@ function playGame() {
         console.log('It is a draw!');
     }
 }
+
+playGame();
