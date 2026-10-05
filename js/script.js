@@ -51,12 +51,24 @@ function playRound(userChoice, computerChoice) {
             // computerChoice === 'paper' ? humanScore += 1 : computerChoice === 'rock' && (computerScore += 1)
             if(computerChoice === 'paper') {
                 humanScore += 1;
-            } else if (computerChoice === 'rock') {
+            } else if (computerChoice === 'paper') {
                 computerScore += 1;
             }
             break;
         default:
             console.log('Please enter a valid answer!');
         }
+}
 
+function playGame() {
+    for (let i =0; i<5; i++) {
+        playRound(getUserChoice(),getComputerChoice());
+    }
+    if(humanScore > computerScore) {
+        console.log('You Won!');
+    } else if(humanScore < computerScore) {
+        console.log('Better luck next time!');
+    } else {
+        console.log('It is a draw!');
+    }
 }
