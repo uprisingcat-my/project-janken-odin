@@ -67,6 +67,8 @@ function playRound(userChoice, computerChoice) {
 function playGame() {
     for (let i =0; i<5; i++) {
         playRound(getUserChoice(prompt('Rock, Paper or Scissor?')),getComputerChoice(Math.random()));
+        console.log(`your score: ${humanScore}`);
+        console.log(`computer score: ${computerScore}`);
     }
     if(humanScore > computerScore) {
         console.log('You Won!');
