@@ -1,17 +1,17 @@
-console.log("Hello nyaa!!");
+console.log('Hello nyaa!!');
 // console.log(Math.random());
 
 function getComputerChoice(randomNumber) {
     if(randomNumber<1/3) {
         console.log(`computer plays: rock`);
-        return "rock"
+        return 'rock';
     } else if(randomNumber<2/3) {
         console.log(`computer plays: paper`);
-        return "paper"
+        return 'paper';
     } else {
         // console.log(randomNumber);
         console.log(`computer plays: scissors`);
-        return "scissors"
+        return 'scissors';
     }
 }
 
@@ -21,7 +21,7 @@ function getUserChoice(choice) {
     let userInput = choice || 'miss!';
     if(userInput.trim() === '') userInput = 'miss!';
     console.log(`you play: ${userInput.toLowerCase()}`);
-    return userInput.toLowerCase()
+    return userInput.toLowerCase();
 }
 
 // console.log(getUserChoice
@@ -30,8 +30,8 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(userChoice, computerChoice) {
-    const normalizedUserChoice = userChoice.toLowerCase();
-    switch(normalizedUserChoice) {
+    const NORMALIZED_USER_CHOICE = userChoice.toLowerCase();
+    switch(NORMALIZED_USER_CHOICE) {
         case computerChoice:
             score();
             console.log('+++ This round is a draw +++');
@@ -43,11 +43,11 @@ function playRound(userChoice, computerChoice) {
             if(computerChoice === 'scissors') {
                 humanScore += 1;
                 score();
-                console.log("+++ you win this round! +++");
+                console.log('+++ you win this round! +++');
             } else if (computerChoice === 'paper') {
                 computerScore += 1;
                 score();
-                console.log("+++ computer wins this round! +++");
+                console.log('+++ computer wins this round! +++');
             }
             break;
         case 'paper':
@@ -55,11 +55,11 @@ function playRound(userChoice, computerChoice) {
             if(computerChoice === 'rock') {
                 humanScore += 1;
                 score();
-                console.log("+++ you win this round! +++");
+                console.log('+++ you win this round! +++');
             } else if (computerChoice === 'scissors') {
                 computerScore += 1;
                 score();
-                console.log("+++ computer wins this round! +++");
+                console.log('+++ computer wins this round! +++');
             }
             break;
         case 'scissors':
@@ -67,11 +67,11 @@ function playRound(userChoice, computerChoice) {
             if(computerChoice === 'paper') {
                 humanScore += 1;
                 score();
-                console.log("+++ you win this round! +++");
+                console.log('+++ you win this round! +++');
             } else if (computerChoice === 'rock') {
                 computerScore += 1;
                 score();
-                console.log("+++ computer wins this round! +++");
+                console.log('+++ computer wins this round! +++');
             }
             break;
         default:
