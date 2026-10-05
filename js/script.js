@@ -45,6 +45,7 @@ function playRound(userChoice, computerChoice) {
                 console.log("+++ you win this round! +++");
             } else if (computerChoice === 'paper') {
                 computerScore += 1;
+                score();
                 console.log("+++ computer wins this round! +++");
             }
             break;
