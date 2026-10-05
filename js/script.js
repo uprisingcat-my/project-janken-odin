@@ -13,3 +13,9 @@ function getComputerChoice(randomNumber) {
 }
 
 console.log(getComputerChoice(Math.random()));
+
+function getUserChoice(choice) {
+    return prompt('Rock, Paper or Scissors? \n Type: \n 1 for Rock \n 2 for Paper \n 3 for Scissors');
+}
+
+console.log(getUserChoice());
