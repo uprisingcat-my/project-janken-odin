@@ -32,13 +32,28 @@ function playRound(userChoice, computerChoice) {
         case 'rock':
             // computerChoice === 'scissor' && (humanScore += 1);
             // computerChoice === 'paper' && (computerScore +=1);
-            computerChoice === 'scissor' ? humanScore += 1 : computerChoice === 'paper' && (computerScore += 1)
+            // computerChoice === 'scissor' ? humanScore += 1 : computerChoice === 'paper' && (computerScore += 1)
+            if(computerChoice === 'scissor') {
+                humanScore += 1;
+            } else if (computerChoice === 'paper') {
+                computerScore += 1;
+            }
             break;
         case 'paper':
-            computerChoice === 'rock' ? humanScore += 1 : computerChoice === 'scissor' && (computerScore += 1)
+            // computerChoice === 'rock' ? humanScore += 1 : computerChoice === 'scissor' && (computerScore += 1)
+            if(computerChoice === 'rock') {
+                humanScore += 1;
+            } else if (computerChoice === 'scissor') {
+                computerScore += 1;
+            }
             break;
         case 'scissor':
-            computerChoice === 'paper' ? humanScore += 1 : computerChoice === 'rock' && (computerScore += 1)
+            // computerChoice === 'paper' ? humanScore += 1 : computerChoice === 'rock' && (computerScore += 1)
+            if(computerChoice === 'paper') {
+                humanScore += 1;
+            } else if (computerChoice === 'rock') {
+                computerScore += 1;
+            }
             break;
         default:
             console.log('Please enter a valid answer!');
