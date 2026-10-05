@@ -71,17 +71,18 @@ function playRound(userChoice, computerChoice) {
 }
 
 function playGame() {
+    console.log('__________________________________________');
     for (let i =0; i<5; i++) {
         playRound(getUserChoice(prompt('Rock, Paper or Scissor?')),getComputerChoice(Math.random()));
         console.log(`your score: ${humanScore}`);
         console.log(`computer score: ${computerScore}`);
     }
     if(humanScore > computerScore) {
-        console.log('You Won!');
+        console.log('__________You Won!__________');
     } else if(humanScore < computerScore) {
-        console.log('Better luck next time!');
+        console.log('___Better luck next time!___');
     } else {
-        console.log('It is a draw!');
+        console.log('________It\'s a draw!________');
     }
 }
 
