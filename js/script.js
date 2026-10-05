@@ -15,7 +15,10 @@ function getComputerChoice(randomNumber) {
 console.log(getComputerChoice(Math.random()));
 
 function getUserChoice(choice) {
-    return prompt('Rock, Paper or Scissors? \n Type: \n 1 for Rock \n 2 for Paper \n 3 for Scissors');
+    return prompt('Rock, Paper or Scissors?')
 }
 
 console.log(getUserChoice());
+
+let humanScore = 0;
+let computerScore = 0;
