@@ -7,7 +7,7 @@ function getComputerChoice(randomNumber) {
     } else if(randomNumber<2/3) {
         return "paper"
     } else {
-        console.log(randomNumber);
+        // console.log(randomNumber);
         return "scissors"
     }
 }
