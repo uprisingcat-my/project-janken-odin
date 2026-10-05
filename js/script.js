@@ -18,7 +18,8 @@ function getComputerChoice(randomNumber) {
 // console.log(getComputerChoice(Math.random()));
 
 function getUserChoice(choice) {
-    const userInput = choice || 'miss!';
+    let userInput = choice || 'miss!';
+    if(userInput.trim() === '') userInput = 'miss!';
     console.log(`you play: ${userInput.toLowerCase()}`);
     return userInput.toLowerCase()
 }
