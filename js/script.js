@@ -15,10 +15,33 @@ function getComputerChoice(randomNumber) {
 console.log(getComputerChoice(Math.random()));
 
 function getUserChoice(choice) {
-    return prompt('Rock, Paper or Scissors?')
+    return prompt('Rock, Paper or Scissor?')
 }
 
 console.log(getUserChoice());
 
 let humanScore = 0;
 let computerScore = 0;
+
+function playRound(userChoice, computerChoice) {
+    const normalizedUserChoice = userChoice.toLowerCase();
+    switch(normalizedUserChoice) {
+        case computerChoice:
+            console.log('It is a draw');
+            break;
+        case 'rock':
+            // computerChoice === 'scissor' && (humanScore += 1);
+            // computerChoice === 'paper' && (computerScore +=1);
+            computerChoice === 'scissor' ? humanScore += 1 : computerChoice === 'paper' && (computerScore += 1)
+            break;
+        case 'paper':
+            computerChoice === 'rock' ? humanScore += 1 : computerChoice === 'scissor' && (computerScore += 1)
+            break;
+        case 'scissor':
+            computerChoice === 'paper' ? humanScore += 1 : computerChoice === 'rock' && (computerScore += 1)
+            break;
+        default:
+            console.log('Please enter a valid answer!');
+        }
+
+}
