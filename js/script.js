@@ -50,24 +50,24 @@ function playRound(userChoice, computerChoice) {
             // computerChoice === 'rock' ? humanScore += 1 : computerChoice === 'scissor' && (computerScore += 1)
             if(computerChoice === 'rock') {
                 humanScore += 1;
-                console.log("you win this round!");
+                console.log("+++ you win this round! +++");
             } else if (computerChoice === 'scissor') {
                 computerScore += 1;
-                console.log("computer wins this round!");
+                console.log("+++ computer wins this round! +++");
             }
             break;
         case 'scissor':
             // computerChoice === 'paper' ? humanScore += 1 : computerChoice === 'rock' && (computerScore += 1)
             if(computerChoice === 'paper') {
                 humanScore += 1;
-                console.log("you win this round!");
+                console.log("+++ you win this round! +++");
             } else if (computerChoice === 'paper') {
                 computerScore += 1;
-                console.log("computer wins this round!");
+                console.log("+++ computer wins this round! +++");
             }
             break;
         default:
-            console.log('Please enter a valid answer!');
+            console.log('+++ Please enter a valid answer! +++');
         }
 }
 
