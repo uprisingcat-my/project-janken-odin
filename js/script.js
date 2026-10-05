@@ -18,8 +18,9 @@ function getComputerChoice(randomNumber) {
 // console.log(getComputerChoice(Math.random()));
 
 function getUserChoice(choice) {
-    console.log(`you play: ${choice.toLowerCase()}`);
-    return choice.toLowerCase();
+    const userInput = choice || 'miss!';
+    console.log(`you play: ${userInput.toLowerCase()}`);
+    return userInput.toLowerCase()
 }
 
 // console.log(getUserChoice
@@ -31,7 +32,7 @@ function playRound(userChoice, computerChoice) {
     const normalizedUserChoice = userChoice.toLowerCase();
     switch(normalizedUserChoice) {
         case computerChoice:
-            console.log('This round is a draw');
+            console.log('+++ This round is a draw +++');
             break;
         case 'rock':
             // computerChoice === 'scissor' && (humanScore += 1);
@@ -39,10 +40,10 @@ function playRound(userChoice, computerChoice) {
             // computerChoice === 'scissor' ? humanScore += 1 : computerChoice === 'paper' && (computerScore += 1)
             if(computerChoice === 'scissor') {
                 humanScore += 1;
-                console.log("you win this round!");
+                console.log("+++ you win this round! +++");
             } else if (computerChoice === 'paper') {
                 computerScore += 1;
-                console.log("computer wins this round!");
+                console.log("+++ computer wins this round! +++");
             }
             break;
         case 'paper':
